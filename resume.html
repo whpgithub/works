@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			button{
+				font-weight: bolder;
+			}
+			.file1{
+				position: relative;
+				left: -5px;
+			}
+			.opt{
+				position: relative;
+				left: -5px;
+			}
+			body{
+				line-height: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		姓名：<input type="text" id="username"/><br/>
+		密码：<input type="text" id="password"/><br/>
+		性别：
+		<input type="radio" name="sex" checked/>男
+		<input type="radio" name="sex"/>女<br/>
+		血型：
+		<input type="radio" name="bloodtype"/>o
+		<input type="radio" name="bloodtype"/>A	
+		<input type="radio" name="bloodtype"/>B
+		<input type="radio" name="bloodtype"/>AB<br/>
+		性格：
+		<input type="checkbox" name="character"/>热情大方
+		<input type="checkbox" name="character"/>温柔体贴
+		<input type="checkbox" name="character"/>多愁善感<br/>
+		文件：
+		<input type="text" class="file1"/>&nbsp;<input type="file"/><br/>
+		简介：<input type="text"/><br/>
+		城市：
+		<select class="opt">
+			<option>北京市</option>
+			<option>上海</option>
+			<option>广州</option>
+			<option>成都</option>
+		</select><br/>
+		<input type="submit" value="提交" onclick="test()"/>
+		<input type="reset" value="重置"/>
+		<script type="text/javascript">
+			function test(){
+				var username=document.getElementById("username").value;
+				var password=document.getElementById("password").value;
+				if(username==""||password==""){
+					alert("用户名或密码不能为空！")
+				}
+			}
+		</script>
+	</body>
+</html>
