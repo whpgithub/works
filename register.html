@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>用户注册页面</title>
+	</head>
+	<style>
+		*{
+			background-color: blanchedalmond;
+		}
+		input{
+			margin-top: 10px;
+			background-color: white;
+		}
+	</style>
+	<body>
+		<form>
+			用户名：<input type="text" id="username"/><br/>
+			密 &nbsp; 码：<input type="text" id="password"/><br/>
+			确认密码：<input type="text" id="confirmword"/><br/>
+			<input type="button" value="注册" onclick="test()"/>
+		</form>
+		<script type="text/javascript">
+			function test(){
+				var x=document.getElementById("username").value;
+				// var y=x.replace(/\s*/g,"");正则表达式去除输入框中的空格
+				var z=document.getElementById("password").value;
+				var p=z.replace(/\s*/g,"");
+				var s=document.getElementById("confirmword").value;
+				if(x==""){
+					alert("用户名不能为空！")
+				}
+				if(p.length<6){
+					alert("密码小于6位，不符和条件！")
+				}
+				if(z==s){
+					alert("注册成功！")
+				}
+				if(z!=s){
+					alert("两次密码不一致！")
+				}
+			}
+		</script>
+	</body>
+</html>
