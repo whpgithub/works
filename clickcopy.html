@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#success{
+				color: blue;
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="text" id="text1"/>&nbsp;<button onclick="xerox()">复制</button>&nbsp;<input type="text" id="text2"/><br/><br/>
+		<div><span id="success"></span></div>
+		<script type="text/javascript">
+			function xerox(){
+				var x=document.getElementById("text1").value;
+				document.getElementById("text2").value=x;
+				document.getElementById("success").innerText="复制成功！"
+			}
+		</script>
+	</body>
+</html>
